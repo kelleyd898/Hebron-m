@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Printer Setup Guide | Manuals & Troubleshooting Guide</title>
+    <title>Printer Setup Guide | Hebron Independent Manual</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         /* WIKIPEDIA CORE STYLING */
@@ -81,7 +81,7 @@
             gap: 15px;
         }
 
-        /* WIKI INFOBOX (RIGHT SIDE) */
+        /* INFOBOX */
         .infobox {
             float: right;
             width: 300px;
@@ -111,11 +111,9 @@
 
         h2 { border-bottom: 1px solid var(--border-color); margin: 30px 0 15px 0; font-family: serif; }
         h3 { margin: 20px 0 10px 0; }
-
         ol, ul { margin-left: 30px; margin-bottom: 20px; }
         li { margin-bottom: 8px; }
 
-        /* DATA TABLE FOR ERRORS */
         .error-table {
             width: 100%;
             border-collapse: collapse;
@@ -138,8 +136,8 @@
             border-top: 1px solid var(--border-color);
             text-align: center;
         }
+        footer a { color: var(--wiki-blue); text-decoration: none; margin: 0 10px; }
 
-        /* MOBILE FIX */
         @media (max-width: 768px) {
             .wrapper { flex-direction: column; }
             aside { width: 100%; order: 2; border-top: 1px solid var(--border-color); }
@@ -151,9 +149,9 @@
 <body>
 
 <header>
-    <a href="#" class="wiki-logo">Hebron</a>
+    <a href="index.html" class="wiki-logo">Hebron</a>
     <div class="search-box">
-        <input type="text" placeholder="Search Printer Guide...">
+        <input type="text" placeholder="Search Hebron...">
         <button style="border:none; background:none; cursor:pointer;"><i class="fas fa-search"></i></button>
     </div>
 </header>
@@ -162,23 +160,24 @@
     <aside>
         <h3>Navigation</h3>
         <ul>
-            <li><a href="#">Main page</a></li>
-            <li><a href="#">Setup Wizard</a></li>
-            <li><a href="#">Troubleshooting</a></li>
-            <li><a href="#">Recent changes</a></li>
+            <li><a href="index.html">Main page</a></li>
+            <li><a href="about.html">About Hebron</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
         </ul>
-        <h3>Resources</h3>
+        <h3>Driver Downloads</h3>
         <ul>
-            <li><a href="#">Driver Library</a></li>
-            <li><a href="#">Contact Support</a></li>
-            <li><a href="#">Manuals</a></li>
+            <li><a href="https://support.hp.com/drivers" target="_blank" rel="noopener">HP Drivers</a></li>
+            <li><a href="https://www.canon.com/support" target="_blank" rel="noopener">Canon Drivers</a></li>
+            <li><a href="https://epson.com/support" target="_blank" rel="noopener">Epson Drivers</a></li>
+            <li><a href="https://support.brother.com" target="_blank" rel="noopener">Brother Drivers</a></li>
         </ul>
     </aside>
 
     <main>
         <div class="disclaimer-box">
             <i class="fas fa-exclamation-triangle" style="color:#f28500; font-size: 24px;"></i>
-            <span>This is an <b>Independent Educational Resource</b>. We provide setup guides and are not affiliated with any printer manufacturer. For official support, visit your brand's website.</span>
+            <span>This is an <b>Independent Educational Resource</b>. We provide setup guides and are not affiliated with any printer manufacturer.</span>
         </div>
 
         <h1 class="first-heading">Printer Setup & Configuration</h1>
@@ -218,6 +217,7 @@
 
         <h2 id="drivers">2. Driver Installation Theory</h2>
         <p>A printer driver acts as a bridge between the operating system (OS) and the printer hardware. Without the correct driver, the OS cannot send print jobs correctly.</p>
+        
         <h3>Standard Methods:</h3>
         <ol>
             <li><b>Plug-and-Play (PnP):</b> Windows/macOS automatically detects the device via USB.</li>
@@ -235,26 +235,21 @@
         <blockquote>Note: Most printers prefer the 2.4GHz band over 5GHz for better wall penetration.</blockquote>
 
         <h2 id="mobile">4. Mobile & Cloud Printing</h2>
-        <p>Modern configuration includes connecting handheld devices to the printer using standardized protocols:</p>
+        <p>Handheld devices connect to printers using standardized protocols:</p>
         <ul>
-            <li><b>AirPrint:</b> Apple's proprietary protocol for iOS and macOS devices without manual driver installation.</li>
-            <li><b>Mopria:</b> A standard for Android devices that allows printing across different brands.</li>
-            <li><b>Cloud Print Services:</b> Remote printing via email-to-print or specialized manufacturer apps.</li>
+            <li><b>AirPrint:</b> Apple's protocol for iOS devices.</li>
+            <li><b>Mopria:</b> A standard for Android devices.</li>
         </ul>
 
         <h2 id="maintenance">5. Preventive Maintenance</h2>
-        <p>To ensure longevity and print quality, follow these maintenance routines:</p>
         <ul>
-            <li><b>Print Head Cleaning:</b> Run the internal utility if streaks appear on documents.</li>
-            <li><b>Firmware Updates:</b> Regularly check for updates to fix security vulnerabilities.</li>
-            <li><b>Alignment Page:</b> Perform after every cartridge replacement to ensure sharp text.</li>
+            <li><b>Print Head Cleaning:</b> Run the internal utility if streaks appear.</li>
+            <li><b>Firmware Updates:</b> Check for security and performance patches.</li>
         </ul>
 
         <h2 id="trouble">6. Common Troubleshooting</h2>
         <h3>Printer is "Offline"</h3>
-        <p>If your computer status shows 'Offline', ensure that "Use Printer Offline" is unchecked in your OS settings and that the SNMP status is correctly configured in the Port settings.</p>
-        <h3>Print Spooler Error</h3>
-        <p>The <b>Print Spooler</b> is a service that manages jobs. If it crashes, you must restart it via <code>services.msc</code> in Windows.</p>
+        <p>Ensure that "Use Printer Offline" is unchecked in your OS settings and check the SNMP status in Port settings.</p>
 
         <h2 id="errorcodes">7. Common Error Codes</h2>
         <table class="error-table">
@@ -269,46 +264,33 @@
                 <tr>
                     <td><b>E0, E3</b></td>
                     <td>Paper Jam</td>
-                    <td>Check the rear door and input tray for stuck paper.</td>
-                </tr>
-                <tr>
-                    <td><b>0x... (e.g. 0xc19a0003)</b></td>
-                    <td>Printhead Failure</td>
-                    <td>Reset the printer or reseat the printhead.</td>
-                </tr>
-                <tr>
-                    <td><b>50.x, 51.x</b></td>
-                    <td>Fuser Error (Laser)</td>
-                    <td>Turn off the printer for 20 minutes to cool down.</td>
+                    <td>Check rear door and tray.</td>
                 </tr>
                 <tr>
                     <td><b>Check Ink</b></td>
-                    <td>Cartridge Not Recognized</td>
-                    <td>Clean the gold contacts with a lint-free cloth.</td>
+                    <td>Cartridge Issue</td>
+                    <td>Clean gold contacts with a cloth.</td>
                 </tr>
             </tbody>
         </table>
-
     </main>
 </div>
 
 <footer>
     <p>This page was last edited on <span id="currentDate"></span>.</p>
-    <p>Privacy Policy | About Hebron | Disclaimers | Terms of Use</p>
+    <p>
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="about.html">About Hebron</a> | 
+        <a href="terms.html">Terms of Use</a>
+    </p>
     <div style="margin-top:20px;">
-        <i class="fab fa-wikipedia-w"></i> Independent Educational Manual
+        Hebron Independent Educational Manual &copy; 2026
     </div>
 </footer>
 
 <script>
     document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
 </script>
-
-<script>
-      gtag('event', 'conversion', {
-          'send_to': 'AW-17754747703/5oaICNngxMUbELfmj5JC'
-      });
-    </script>
 
 </body>
 </html>

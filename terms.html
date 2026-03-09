@@ -3,79 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use | Printer Tech Reference</title>
-    <meta name="robots" content="noindex, follow">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Terms of Use - Hebron Knowledge Base</title>
     <style>
-        /* SAME CSS AS PRIVACY PAGE */
-        :root { --primary: #2563eb; --text-dark: #1f2937; --bg-light: #f9fafb; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; margin: 0; padding: 0; }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        header { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 16px 0; }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo-text h1 { font-size: 18px; font-weight: 700; color: var(--text-dark); margin:0; }
-        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 14px; margin-left: 24px; }
-        .nav-links a:hover { color: var(--primary); }
-        .policy-content { background: #fff; padding: 40px; border-radius: 12px; border: 1px solid #e5e7eb; margin-top: 30px; }
-        h1 { font-size: 32px; margin-bottom: 10px; }
-        .date { color: #6b7280; font-size: 14px; margin-bottom: 30px; display: block; }
-        h2 { font-size: 20px; margin-top: 30px; margin-bottom: 15px; color: #111827; }
-        p { margin-bottom: 15px; color: #4b5563; }
-        footer { text-align: center; padding: 30px; color: #6b7280; font-size: 13px; border-top: 1px solid #e5e7eb; margin-top: 40px; }
+        /* Wiki-Style Design Tokens */
+        body {
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            background-color: #f6f6f6;
+            margin: 0;
+            padding: 0;
+            color: #202122;
+        }
+
+        /* Sidebar Placeholder */
+        #mw-sidebar {
+            width: 160px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 20px 15px;
+        }
+
+        .hebron-logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+            font-family: sans-serif;
+            border-bottom: none;
+        }
+
+        /* Main Content Area */
+        #content {
+            background-color: #ffffff;
+            border: 1px solid #a7d7f9;
+            border-right-width: 0;
+            margin-left: 176px;
+            padding: 1.25em 1.5em 1.5em 1.5em;
+            min-height: 100vh;
+        }
+
+        /* Responsive for Mobile */
+        @media (max-width: 768px) {
+            #content { margin-left: 0; border: none; }
+            #mw-sidebar { position: relative; width: auto; padding: 10px 20px; }
+        }
+
+        /* Header Styles */
+        .firstHeading {
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            font-size: 1.8em;
+            border-bottom: 1px solid #a2a9b1;
+            margin-bottom: 0.25em;
+            padding-top: 0;
+            font-weight: normal;
+        }
+
+        .siteSub {
+            font-size: 12.8px;
+            color: #54595d;
+            margin-bottom: 20px;
+        }
+
+        /* Content Text */
+        p {
+            font-family: sans-serif;
+            font-size: 0.875em;
+            line-height: 1.6;
+            margin: 0.5em 0 1em 0;
+        }
+
+        h2 {
+            font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+            border-bottom: 1px solid #a2a9b1;
+            font-weight: normal;
+            margin-top: 1.5em;
+            margin-bottom: 0.25em;
+            font-size: 1.5em;
+        }
+
+        /* Table of Contents box style */
+        .toc {
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 10px 15px;
+            font-size: 90%;
+            display: inline-block;
+            margin: 15px 0;
+            font-family: sans-serif;
+        }
+
+        .toc-title {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .toc li {
+            margin: 4px 0;
+        }
+
+        .toc-number {
+            color: #202122;
+            margin-right: 5px;
+        }
+
+        .date-notice {
+            font-size: 13px;
+            font-style: italic;
+            color: #54595d;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            margin-left: 176px;
+            padding: 2em 1.5em;
+            font-size: 12px;
+            color: #54595d;
+            font-family: sans-serif;
+        }
     </style>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17978856791"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17978856791');
-</script>
 </head>
 <body>
 
-<header>
-    <div class="nav-container">
-        <div class="logo-text"><h1>Hebron-Setup</h1></div>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="about.html">About</a>
-        </nav>
-    </div>
-</header>
-
-<div class="container">
-    <h1>Terms of Use</h1>
-    <span class="date">Last Updated: December 2025</span>
-
-    <div class="policy-content">
-        <p>Please read these Terms of Use ("Terms") carefully before using our website. By accessing this website, you agree to be bound by these Terms.</p>
-
-        <h2>1. Educational Purpose Only</h2>
-        <p>This website is an independent educational resource. The content provided is for general informational purposes only. We are <strong>not</strong> a technical support service provider, and we do not offer repair services, remote assistance, or official software downloads.</p>
-
-        <h2>2. No Affiliation</h2>
-        <p>We are an independent entity and are <strong>not affiliated with, endorsed by, or sponsored by</strong> any printer manufacturer (such as HP, Canon, Epson, Brother, etc.). All product names, logos, and brands are property of their respective owners and are used here solely for identification and educational purposes.</p>
-
-        <h2>3. User Responsibility</h2>
-        <p>You acknowledge that any actions you take based on the information on this website are at your own risk. We are not liable for any damage to your devices, data loss, or other issues that may arise from following general troubleshooting concepts.</p>
-
-        <h2>4. External Links</h2>
-        <p>Our website may contain links to third-party websites. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party web sites or services.</p>
-
-        <h2>5. Changes to Terms</h2>
-        <p>We reserve the right to modify or replace these Terms at any time. Your continued use of the website after any such changes constitutes your acceptance of the new Terms.</p>
+<div id="mw-sidebar">
+    <div class="hebron-logo">Hebron</div>
+    <div style="font-size: 12px; margin-top: 10px; font-family: sans-serif;">
+        <a href="index.html" style="color: #0645ad; text-decoration: none;">Main Page</a><br>
+        <a href="about.html" style="color: #0645ad; text-decoration: none;">About Hebron</a>
     </div>
 </div>
 
+<div id="content">
+    <h1 class="firstHeading">Terms of Use</h1>
+    <div class="siteSub">From Hebron, the independent technical reference</div>
+
+    <div class="date-notice">
+        Last Updated: December 2025
+    </div>
+
+    <div class="toc">
+        <div class="toc-title">Contents</div>
+        <ul>
+            <li><span class="toc-number">1</span> Educational Purpose Only</li>
+            <li><span class="toc-number">2</span> No Affiliation</li>
+            <li><span class="toc-number">3</span> User Responsibility</li>
+            <li><span class="toc-number">4</span> External Links</li>
+            <li><span class="toc-number">5</span> Changes to Terms</li>
+        </ul>
+    </div>
+
+    <p>Please read these Terms of Use ("Terms") carefully before using the Hebron website. By accessing this resource, you agree to be bound by these Terms.</p>
+
+    <h2>1. Educational Purpose Only</h2>
+    <p>This website is an independent educational resource managed by Hebron. The content provided is for general informational purposes only. We are <b>not</b> a technical support service provider, and we do not offer repair services, remote assistance, or official software downloads.</p>
+
+    <h2>2. No Affiliation</h2>
+    <p>Hebron is an independent entity and is <b>not affiliated with, endorsed by, or sponsored by</b> any printer manufacturer (such as HP, Canon, Epson, Brother, etc.). All product names, logos, and brands are property of their respective owners and are used here solely for identification and educational purposes.</p>
+
+    <h2>3. User Responsibility</h2>
+    <p>You acknowledge that any actions you take based on the information provided by Hebron are at your own risk. We are not liable for any damage to your devices, data loss, or other issues that may arise from following general troubleshooting concepts.</p>
+
+    <h2>4. External Links</h2>
+    <p>Hebron may contain links to third-party websites. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party web sites or services.</p>
+
+    <h2>5. Changes to Terms</h2>
+    <p>Hebron reserves the right to modify or replace these Terms at any time. Your continued use of the website after any such changes constitutes your acceptance of the new Terms.</p>
+</div>
+
 <footer>
-    &copy; 2025 Independent Printer Reference Guide. All rights reserved.
+    <p>This document is a property of Hebron.<br>
+    &copy; 2025 Hebron Independent Printer Reference Guide. All rights reserved.</p>
 </footer>
 
 </body>
